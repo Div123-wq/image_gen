@@ -1,3 +1,4 @@
+# Project dependencies
 flask
 huggingface_hub
 python-dotenv
