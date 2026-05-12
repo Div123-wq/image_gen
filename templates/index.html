@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visionary AI | Premium Text-to-Image Generator</title>
+    <meta name="description" content="Generate stunning AI-powered images from text prompts with Visionary AI.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="bg-glow"></div>
+    
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-wand-magic-sparkles"></i>
+                <span>Visionary AI</span>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="active">Generator</a>
+                <a href="#">Gallery</a>
+                <a href="#">Pricing</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Imagine it. <span class="gradient-text">Generate it.</span></h1>
+            <p>Transform your wildest thoughts into breathtaking visual masterpieces in seconds.</p>
+        </section>
+
+        <section class="generator-container">
+            <div class="input-card">
+                <div class="input-wrapper">
+                    <textarea id="prompt-input" placeholder="A futuristic city with flying cars and neon lights, digital art style..." rows="3"></textarea>
+                    <button id="generate-btn" type="button">
+                        <span class="btn-text">Generate Image</span>
+                        <div class="loader" id="btn-loader"></div>
+                    </button>
+                </div>
+                <div class="prompt-suggestions">
+                    <span>Try:</span>
+                    <button class="suggestion">Cyberpunk cat</button>
+                    <button class="suggestion">Ethereal forest</button>
+                    <button class="suggestion">Retro spaceship</button>
+                </div>
+            </div>
+
+            <div class="output-card" id="output-card">
+                <div class="placeholder-content" id="placeholder">
+                    <i class="fas fa-image"></i>
+                    <p>Your masterpiece will appear here</p>
+                </div>
+                <div class="image-wrapper hidden" id="image-wrapper">
+                    <img id="generated-image" src="" alt="Generated AI Artwork">
+                    <div class="image-actions">
+                        <button id="download-btn" title="Download Image">
+                            <i class="fas fa-download"></i>
+                        </button>
+                        <button id="share-btn" title="Share Artwork">
+                            <i class="fas fa-share-alt"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Visionary AI. Powered by Stable Diffusion XL.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
